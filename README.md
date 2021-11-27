@@ -9,3 +9,9 @@ Currently supports:
 
 Options to add:
 - Asynchronously get the data from the Api
+
+# Credits
+Thanks to @LidorDublin for giving me the idea for this fun project
+Last-but-not-least: Thanks to [Israel Railways](https://www.rail.co.il/en) for being slow enough for me to be able to code when commuting
+
+###### Note: Any CRs and options to add are welcome!
