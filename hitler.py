@@ -5,7 +5,9 @@ import requests
 
 GENERIC_URL = "https://en.wikipedia.org/w/api.php?action=query&format=json&\
 prop=links&meta=&titles={link}&pllimit=500"
-STARTING_LINK = "german"  # import random random.choice(['Audi', 'german', 'Mercedes-Benz'])
+STARTING_LINK = (
+    "Israel"  # import random random.choice(['Audi', 'german', 'Mercedes-Benz'])
+)
 
 
 """
@@ -53,6 +55,19 @@ def hitler_validation(links):
 
 
 def search_for_hitler(visited_wikis, graph, wiki_url):
+    """
+    This function recursively iterate over a wiki page and checks for Hitler in it.
+    The wiki-exexpanding graph let us save results and search faster.
+
+    Args:
+        visited_wikis (set): Unique cache set for saving results.
+        graph (dict): Wiki graph.
+        wiki_url (str): The wiki-url to search in
+
+    Returns:
+        recursively go through the graph and search in each.
+
+    """
 
     if wiki_url not in visited_wikis:
         graph[wiki_url] = get_links_from_url(wiki_url)
